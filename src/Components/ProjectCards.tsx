@@ -24,11 +24,14 @@ const ProjectCards = (props:iProps) =>{
         cardStyle: {
             
             maxHeight:300,
-            maxWidth:400,
-            
+            Width:400,
+
         },
         cardContent:{
             paddingBottom:30
+        },
+        div:{
+            width: 300
         }
     });
 
@@ -36,7 +39,7 @@ const ProjectCards = (props:iProps) =>{
     const classes = useStyles();
 
 return(
-    <div >
+    <div className={classes.div}>
         <Card className={classes.cardStyle}>
             <CardActionArea>
                 <CardMedia>

@@ -13,7 +13,12 @@ function App() {
     <div className="App" style={{paddingLeft:"30hr"}}>
       <Appbar></Appbar>
       <Welcome></Welcome>
-      <CurrentProjects></CurrentProjects>
+      <div style={{display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',}}>
+        <CurrentProjects></CurrentProjects>
+      </div>
+      
     </div>
   );
 }
