@@ -7,8 +7,8 @@ import CurrentProjects from "./Components/CurrentProjects"
 
 function App() {
   return (
-    <div className="App">
-      <Appbar></Appbar>
+    <div className="App" style={{marginTop:100}}>
+      
       <Welcome></Welcome>
       <div style={{display: 'flex',
             alignItems: 'center',

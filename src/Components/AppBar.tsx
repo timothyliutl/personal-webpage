@@ -6,7 +6,7 @@ import { createStyles, makeStyles, Theme, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            flexGrow: 1,
+            alignContent: 'center'
         },
         menuButton: {
             marginRight: theme.spacing(2),
@@ -17,12 +17,14 @@ const useStyles = makeStyles((theme: Theme) =>
         page: {
             marginTop: 100,
             
+            
 
         },
         appbar: {
             position: 'fixed',
             borderRadius: 20,
-            width: '95%',
+            
+            
         }
     }),
 );
