@@ -7,13 +7,13 @@ import CurrentProjects from "./Components/CurrentProjects"
 
 function App() {
   return (
-    <div className="App" style={{paddingLeft:"30hr"}}>
+    <div className="App">
       <Appbar></Appbar>
       <Welcome></Welcome>
       <div style={{display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',}}>
-        <CurrentProjects></CurrentProjects>
+        
       </div>
       
     </div>

@@ -12,15 +12,17 @@ const useStyles = makeStyles((theme: Theme) =>
             marginRight: theme.spacing(2),
         },
         title: {
-            flex: 1
+           
         },
         page: {
             marginTop: 100,
-            width: '70%'
+            
+
         },
         appbar: {
             position: 'fixed',
-            borderRadius: 16
+            borderRadius: 20,
+            width: '95%',
         }
     }),
 );
@@ -37,13 +39,13 @@ const Appbar = () => {
                 <Toolbar>
                     <Grid container justify={'space-evenly'}>
                         <Grid item>
-                            <Typography variant={'h6'}>Home</Typography>
+                            <Typography variant={'h6'}>Currently</Typography>
                         </Grid>
                         <Grid item>
-                            <Typography variant={'h6'}>Current Projects</Typography>
+                            <Typography variant={'h6'}>Under</Typography>
                         </Grid>
                         <Grid item>
-                            <Typography variant={'h6'}>Contact</Typography>
+                            <Typography variant={'h6'}>Construction</Typography>
                         </Grid>
                     </Grid>
                 </Toolbar>
