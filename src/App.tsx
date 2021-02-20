@@ -3,10 +3,7 @@ import './App.css';
 import Welcome from "./Pages/Welcome";
 import Appbar from "./Components/AppBar"
 import CurrentProjects from "./Components/CurrentProjects"
-
-interface type {
-  readonly name: string
-}
+//TODO: prototype the website out on figma first
 
 function App() {
   return (
