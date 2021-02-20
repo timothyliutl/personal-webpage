@@ -37,6 +37,7 @@ const Welcome: FC<IProps> = (props) => {
         },
         link: {
             textDecoration: 'none',
+            cursor: 'pointer'
 
         }
     });
@@ -64,17 +65,17 @@ const Welcome: FC<IProps> = (props) => {
                 </Typography>
                     <Grid container direction={'row'}>
                         <Grid item className={classes.icon}>
-                            <a className={classes.link} href={'https://drive.google.com/file/d/1aWGhG6A5G0cX_RKIhh_stYlnLnjjoHA0/view?usp=sharing'}>
+                            <a className={classes.link} onClick={()=>{window.open('https://drive.google.com/file/d/1aWGhG6A5G0cX_RKIhh_stYlnLnjjoHA0/view')}}>
                             <InsertDriveFileIcon fontSize={'large'} color={'inherit'}></InsertDriveFileIcon>
                             <Typography variant={'h6'}>Resume</Typography>
                             </a>
                         </Grid>
                         <Grid item className={classes.icon}>
-                            <a className={classes.link} href={'https://github.com/timothyliutl'}><GitHubIcon fontSize={'large'}></GitHubIcon>
+                            <a className={classes.link} onClick={()=>{window.open('https://github.com/timothyliutl')}}><GitHubIcon fontSize={'large'}></GitHubIcon>
                                 <Typography variant={'h6'}>GitHub</Typography></a>
                         </Grid>
                         <Grid item className={classes.icon}>
-                            <a href={'https://www.linkedin.com/in/timothy-liu-4a738619b/'} className={classes.link}>
+                            <a onClick={()=>{window.open('https://www.linkedin.com/in/timothy-liu-4a738619b/')}} className={classes.link}>
                                 <LinkedInIcon fontSize={'large'} color={'primary'}></LinkedInIcon>
                                 <Typography variant={'h6'}>LinkedIn</Typography>
                             </a>
