@@ -10,6 +10,7 @@ interface IProps {
     cards?: JSON
 }
 
+
 const Welcome: FC<IProps> = (props) => {
     const styles = makeStyles({
         card: {
@@ -39,16 +40,30 @@ const Welcome: FC<IProps> = (props) => {
             textDecoration: 'none',
             cursor: 'pointer'
 
+        },
+
+        individualCards:{
+            padding:5,
+            borderRadius:10
         }
     });
     const classes = styles();
     const cards = props.cards;
-
+    
+    const [hoverID,SetId] = useState(" ");
     const [isHovering, setIsHovering] = useState(false);
 
-    const setHover = () =>{
-        setIsHovering(!isHovering);
+    const onEnter = (event:any) =>{
+        SetId(event.target.id);
+
     }
+    const onLeave = (event:any) =>{
+            SetId("jghkhkj")
+
+    }
+   
+
+    
 
     return (
         <div>
@@ -59,27 +74,35 @@ const Welcome: FC<IProps> = (props) => {
 
             
             <Grid container justify={'center'}>
-                <Card className={classes.card} onMouseEnter={setHover} onMouseLeave={setHover} elevation={isHovering?6:1}>
+                <Card className={classes.card} elevation={1} onMouseLeave={onLeave}>
                 <Typography variant={'h4'} className={classes.type}>
                 Quick Links
                 </Typography>
                     <Grid container direction={'row'}>
                         <Grid item className={classes.icon}>
-                            <a className={classes.link} onClick={()=>{window.open('https://drive.google.com/file/d/1aWGhG6A5G0cX_RKIhh_stYlnLnjjoHA0/view')}}>
-                            <InsertDriveFileIcon fontSize={'large'} color={'inherit'}></InsertDriveFileIcon>
-                            <Typography variant={'h6'}>Resume</Typography>
-                            </a>
+                            <Card className={classes.individualCards} onMouseEnter={onEnter} onMouseLeave={onLeave} id = {'resume'} elevation={hoverID=='resume'?6:0}>
+                                <a className={classes.link} onClick={()=>{window.open('https://drive.google.com/file/d/1aWGhG6A5G0cX_RKIhh_stYlnLnjjoHA0/view')}}>
+                                <InsertDriveFileIcon fontSize={'large'} color={'inherit'}></InsertDriveFileIcon>
+                                <Typography variant={'h6'}>Resume</Typography>
+                                </a>
+                            </Card>
+                        </Grid>
+                        
+                        <Grid item className={classes.icon}>
+                            <Card className={classes.individualCards} onMouseEnter={onEnter} onMouseLeave={onLeave} id = {'github'} elevation={hoverID=='github'?6:0}>
+                               <a className={classes.link} onClick={()=>{window.open('https://github.com/timothyliutl')}}><GitHubIcon fontSize={'large'}></GitHubIcon>
+                                <Typography variant={'h6'}>GitHub</Typography>
+                                </a> 
+                            </Card>
+                            
                         </Grid>
                         <Grid item className={classes.icon}>
-                            <a className={classes.link} onClick={()=>{window.open('https://github.com/timothyliutl')}}><GitHubIcon fontSize={'large'}></GitHubIcon>
-                                <Typography variant={'h6'}>GitHub</Typography></a>
-                        </Grid>
-                        <Grid item className={classes.icon}>
+                            <Card className={classes.individualCards} onMouseEnter={onEnter} onMouseLeave={onLeave} id = {'linkedin'} elevation={hoverID=='linkedin'?6:0}>
                             <a onClick={()=>{window.open('https://www.linkedin.com/in/timothy-liu-4a738619b/')}} className={classes.link}>
                                 <LinkedInIcon fontSize={'large'} color={'primary'}></LinkedInIcon>
                                 <Typography variant={'h6'}>LinkedIn</Typography>
                             </a>
-
+                            </Card>
                         </Grid>
                     </Grid>
                 </Card>
