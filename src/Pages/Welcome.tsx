@@ -43,7 +43,7 @@ const Welcome: FC<IProps> = (props) => {
 
         individualCards: {
             
-            padding: 10,
+            padding: 5,
             borderRadius: 10
         }
     });
@@ -92,7 +92,7 @@ const Welcome: FC<IProps> = (props) => {
 
 
             <Grid container justify={'center'}>
-                <Card className={classes.card} elevation={1}>
+                <Card className={classes.card} elevation={3}>
                     <Typography variant={'h4'} className={classes.type}>
                         Quick Links
                     </Typography>
