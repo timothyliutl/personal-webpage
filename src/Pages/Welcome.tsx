@@ -87,7 +87,7 @@ const Welcome: FC<IProps> = (props) => {
         <div>
             <Typography variant={'h2'}>Hello, I am Timothy Liu</Typography>
             <Typography variant={'h5'} className={classes.type}>
-                Second year Queen's Mathematics and Engineering Student
+                Third year Queen's Mathematics and Engineering Student
             </Typography>
 
 

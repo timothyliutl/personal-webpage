@@ -73,7 +73,7 @@ const ProjectArticle = () => {
         </div>
         <div className={classes.textMargin}>
         <Typography variant={'h3'} align={'left'}>Just why</Typography>
-            <Typography variant={'h6'} align={'left'}>There are many reasons why someone would decided to choose eng phys, but none of them are really valid. Who would want to do engineering physics when a program like Apple Math exists</Typography>
+            <Typography variant={'h6'} align={'left'}>There are many reasons why someone would decide to choose eng phys, but none of them are really valid. Who would want to do engineering physics when a program like Apple Math exists</Typography>
         </div>
     </div>
     )
